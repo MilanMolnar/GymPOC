@@ -10,9 +10,7 @@ type ButtonProps = {
 export default function NavigationButtonComponent(props: ButtonProps) {
 
     return (
-        <View style={[styles.button, { backgroundColor: props.color }]}>
-            <Link style={styles.text} href={props.route}>{props.title}</Link>
-        </View>
+        <Link style={[styles.button, styles.text, { backgroundColor: props.color }]} href={props.route}>{props.title}</Link>
     );
 }
 
@@ -20,7 +18,8 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 25,
         fontWeight: 'bold',
-        color: 'white'
+        color: 'white',
+        textAlign:'center'
     },
     button: {
         alignItems: 'center',
