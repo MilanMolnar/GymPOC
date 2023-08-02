@@ -1,10 +1,10 @@
 import { StyleSheet, View, Text } from 'react-native';
 
 
-export default function EditScreen() {
+export default function OverViewScreen() {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Szerkesztes</Text>
+            <Text style={styles.title}>Attekintes</Text>
         </View>
     );
 }
