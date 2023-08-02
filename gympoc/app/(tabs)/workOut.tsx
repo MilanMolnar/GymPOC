@@ -1,10 +1,10 @@
 import { StyleSheet, View, Text } from 'react-native';
 
 
-export default function OverViewScreen() {
+export default function WorkOutScreen() {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Attekintes</Text>
+            <Text style={styles.title}>Edzes</Text>
         </View>
     );
 }

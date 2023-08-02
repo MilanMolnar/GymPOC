@@ -1,4 +1,4 @@
-import { Link, Tabs } from 'expo-router';
+import { Link, Stack, Tabs } from 'expo-router';
 
 export default function TabLayout() {
     return (
@@ -6,14 +6,21 @@ export default function TabLayout() {
             <Tabs.Screen
                 name="index"
                 options={{
-                    title: 'Szerkesztes',
+                    title: 'Attekintes',
                     headerShown: false
                 }}
             />
             <Tabs.Screen
-                name="overView"
+                name="workOut"
                 options={{
-                    title: 'Attekintes',
+                    title: 'Edzes',
+                    headerShown: false
+                }}
+            />
+            <Tabs.Screen
+                name="edit"
+                options={{
+                    title: 'Szerkesztes',
                     headerShown: false
                 }}
             />

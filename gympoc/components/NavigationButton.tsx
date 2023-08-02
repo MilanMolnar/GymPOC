@@ -1,35 +1,35 @@
+import { Link, useRouter } from 'expo-router';
 import { StyleSheet, View, Text, Button, Alert, Pressable } from 'react-native';
 
 type ButtonProps = {
     title: string
-    onPress: Function
+    route: string
     color: string
 }
 
-export default function ButtonComponent(props: ButtonProps) {
+export default function NavigationButtonComponent(props: ButtonProps) {
+
     return (
-        <Pressable 
-            style={[styles.button, {backgroundColor: props.color}]}
-            onPress={() => { props.onPress() }}
-        >
-            <Text style={styles.text}>{props.title}</Text>
-        </Pressable>
+        <View style={[styles.button, { backgroundColor: props.color }]}>
+            <Link style={styles.text} href={props.route}>{props.title}</Link>
+        </View>
     );
 }
 
 const styles = StyleSheet.create({
     text: {
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: 'bold',
-        color:'white'
+        color: 'white'
     },
     button: {
         alignItems: 'center',
         justifyContent: 'center',
-        paddingVertical: 12,
+        paddingVertical: 35,
         paddingHorizontal: 32,
         borderRadius: 4,
         elevation: 3,
         backgroundColor: 'black',
+        width: 350
     },
 });
