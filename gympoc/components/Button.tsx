@@ -19,7 +19,7 @@ export default function ButtonComponent(props: ButtonProps) {
 
 const styles = StyleSheet.create({
     text: {
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: 'bold',
         color:'white'
     },
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         paddingVertical: 12,
-        paddingHorizontal: 32,
+        paddingHorizontal: 0,
         borderRadius: 4,
         elevation: 3,
         backgroundColor: 'black',
