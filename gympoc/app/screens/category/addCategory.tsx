@@ -23,6 +23,9 @@ export default function AddCategoryScreen() {
                 value={text}
                 placeholder="Kategoria neve:"
             />
+
+            <ButtonComponent title={'Kategória mentése'} onPress={() => { storeData(text, {"exercises": []}); router.push('/(tabs)/edit')} } color={'green'}/>
+
         </View>
         
     );

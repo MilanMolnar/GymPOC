@@ -6,6 +6,7 @@ export async function storeData(key:string, value:object) {
     try {
         const jsonValue = JSON.stringify(value);
         await AsyncStorage.setItem(key, jsonValue);
+        console.log(`stored record with key: ${key} and obj value (stringifyed): ${jsonValue}`)
       } catch (e) {
         console.log(`Error while storing :${value}` + e)
       }
