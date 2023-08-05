@@ -1,7 +1,7 @@
 import { StyleSheet, View, Text, TextInput} from 'react-native';
 import { useRouter } from 'expo-router';
 import ButtonComponent from '../../../components/Button';
-import {readData, storeData, removeData} from "../../helpers/persistanceHelper"
+import {readData, storeData, removeData, updateData} from "../../helpers/persistanceHelper"
 import React from 'react';
 
 
@@ -9,7 +9,7 @@ import React from 'react';
 export default function AddCategoryScreen() {
 
    
-    const [text, onChangeText] = React.useState("");
+    const [categoryInput, onChangeText] = React.useState("");
 
     const router = useRouter();
 
@@ -20,11 +20,11 @@ export default function AddCategoryScreen() {
             <TextInput
                 style={styles.input}
                 onChangeText={onChangeText}
-                value={text}
+                value={categoryInput}
                 placeholder="Kategoria neve:"
             />
 
-            <ButtonComponent title={'Kategória mentése'} onPress={() => { storeData(text, {"exercises": []}); router.push('/(tabs)/edit')} } color={'green'}/>
+            <ButtonComponent title={'Kategória mentése'} onPress={() => { updateData("categories", {[categoryInput]: ["gyakorlat1", "gyakorlat2"]}); router.push('/(tabs)/edit')} } color={'green'}/>
 
         </View>
         

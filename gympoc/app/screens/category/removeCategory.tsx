@@ -1,13 +1,19 @@
 import { StyleSheet, View, Text } from 'react-native';
 import { useRouter } from 'expo-router';
 import ButtonComponent from '../../../components/Button';
+import { readData } from '@/app/helpers/persistanceHelper';
 
 export default function RemoveCategoryScreen() {
     const router = useRouter();
 
+    const categories = readData("categories")
+
+
     return (
         <View style={styles.container}>
             <ButtonComponent title={'Vissza a szerkesztes oldalra'} onPress={() => { router.push('/(tabs)/edit') }} color={'red'} />
+
+            
         </View>
     );
 }
