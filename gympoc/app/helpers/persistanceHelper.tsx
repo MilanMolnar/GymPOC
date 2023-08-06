@@ -47,5 +47,8 @@ export async function updateData(key:string, newObject:object) {
   const updatedObject = Object.assign(originalObj, newObject) //appending key-value 
   console.log(updatedObject + "updated obj")
   await storeData(key, updatedObject)
-  //AsyncStorage.clear() to clear
+}
+
+export async function clearAllData() {
+  await AsyncStorage.clear()
 }
